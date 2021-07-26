@@ -1,7 +1,14 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { SampleProvider } from '../components/SampleContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <SampleProvider>
+      <Component {...pageProps} />
+    </SampleProvider>
+    
+  ) 
+  
+  
 }
 export default MyApp
